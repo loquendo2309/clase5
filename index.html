@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="menu">
+        <button class="boton-menu active" onclick="cambiarSeccion('funciones')">Funciones Básicas</button>
+        <button class="boton-menu" onclick="cambiarSeccion('api')">Ejemplos con API</button>
+    </nav>
+
+   <!-- Sección Funciones Básicas -->
+   <section id="funciones" class="seccion active">
     <h1>Ejemplos de Funciones JavaScript</h1>
     
     <div class="grid">
@@ -57,6 +64,36 @@
             <div id="resultadoFactorial" class="resultado"></div>
         </div>
     </div>
+    </section>
+   
+      <!-- Sección Ejemplos con API -->
+    <section id="api" class="seccion">
+        <div class="ejemplo-api">
+            <h2>Ejemplo 1: Obtener Pokémon (Promesas)</h2>
+            <input type="number" id="pokemonId" value="25" min="1">
+            <button class="boton" onclick="obtenerPokemon()">Buscar Pokémon</button>
+            <div id="pokemonResult" class="resultado-api"></div>
+        </div>
+
+        <div class="ejemplo-api">
+            <h2>Ejemplo 2: Cadena de Evoluciones (Async/Await)</h2>
+            <button class="boton" onclick="obtenerEvoluciones()">Mostrar Evoluciones</button>
+            <div id="evolucionesResult" class="resultado-api"></div>
+        </div>
+
+        <div class="ejemplo-api">
+            <h2>Ejemplo 3: Pokémon Aleatorio (Fetch + Then)</h2>
+            <button class="boton" onclick="pokemonAleatorio()">Generar Aleatorio</button>
+            <div id="randomPokemon" class="resultado-api"></div>
+        </div>
+
+        <div class="ejemplo-api">
+            <h2>Ejemplo 4: Obtener Pokémon por Nombre (Async/Await)</h2>
+            <input type="text" id="pokemonNombre" placeholder="Nombre del Pokémon" value="pikachu">
+            <button class="boton" onclick="pokemonPorNombre()">Buscar Pokémon</button>
+            <div id="pokemonNameResult" class="resultado-api"></div>
+        </div>
+    </section>
 
     <script src="scripts.js"></script>
 </body>
